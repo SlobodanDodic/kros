@@ -3,8 +3,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 export default function Header() {
-  const [toggle, useToggle] = useState(true);
-  const toggleState = () => { useToggle(!toggle) };
+  const [toggle, setToggle] = useState(false);
+  const toggleState = () => { setToggle(!toggle) };
 
   return (
     <header>
