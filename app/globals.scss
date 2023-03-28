@@ -1,0 +1,60 @@
+@import "/scss/variables";
+@import "/scss/mixins";
+@import "./info/info";
+@import "./blog/blog";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $color-primary;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+header {
+  position: fixed;
+  top: 0vh;
+  @include between-element;
+  width: 100vw;
+  background-color: $color-primary;
+  color: $color-secondary;
+  padding: 0.7rem 1.4rem;
+  .right a {
+    @include link-decor;
+  }
+  .left {
+    .shape {
+      position: relative;
+      display: block;
+      border-radius: 80% 20% 32% 68% / 58% 22% 78% 42%;
+      height: 2rem;
+      width: 2rem;
+      color: $color-primary;
+      background-color: $color-secondary;
+      p {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        font-size: 3rem;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+@keyframes anim4 {
+  from {
+    top: -100vh;
+  }
+  to {
+    top: 0vh;
+  }
+}
