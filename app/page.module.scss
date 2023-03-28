@@ -57,12 +57,13 @@
     width: 39vw;
     right: 10%;
     border-radius: 29% 71% 60% 42%/24% 55% 47% 77%;
-    // border-radius: 80% 20% 32% 68%/58% 22% 78% 42%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-color: $color-primary;
     border: 2vh solid #32363e00;
+    // filter: drop-shadow(-10px 10px 10px $color-secondary);
+    box-shadow: -7px 10px 5px #32363e66;
     @include media-query(sm) {
       width: 65vw;
       height: 50vh;
@@ -87,7 +88,7 @@
 
 @keyframes change {
   0% {
-    clip-path: polygon(35% 39%, 38% 44%, 40% 51%, 40% 50%);
+    clip-path: polygon(37% 34%, 54% 20%, 60% 16%, 37% 34%);
   }
   50% {
     clip-path: polygon(0 0, 10% 94%, 88% 96%, 100% 8%);

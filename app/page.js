@@ -1,7 +1,7 @@
 import styles from './page.module.scss'
-import { Roboto } from 'next/font/google';
+import { Roboto_Slab } from 'next/font/google';
 
-const customFont = Roboto({
+const customFont = Roboto_Slab({
   weight: ['100', '300', '400', '500', '700', '900'],
   subsets: ['latin'],
   display: 'swap'
