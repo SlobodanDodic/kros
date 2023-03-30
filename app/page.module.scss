@@ -2,107 +2,98 @@
 @import "/scss/mixins";
 
 .main {
-  max-width: 1600px;
+  position: relative;
   width: 100vw;
   height: 100vh;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  .stripe {
-    position: absolute;
-    left: 0vw;
-    bottom: 22vh;
-    width: 100%;
-    height: 50vh;
-    border-radius: 1rem;
-    z-index: -1;
-    background-color: $color-secondary;
-    filter: drop-shadow(0px 0px 24px $color-secondary);
-    border-top: 4px solid $color-primary;
-    border-bottom: 4px solid $color-primary;
-    @include media-query(sm) {
+  @include center-element;
+  flex-direction: column;
+  overflow: hidden;
+  .photo {
+    @include center-element;
+    .workImg,
+    .jerseyImg {
+      position: absolute;
       bottom: 0vh;
+      left: 50vw;
+      height: 90vh;
+      width: auto;
+      object-fit: contain;
+      padding: 10px;
+      filter: brightness(0.2);
+      // filter: drop-shadow(0px 0px 15px $color-secondary);
+      // box-shadow: -10px 15px 39px $color-secondary;
+    }
+    .workImg {
+      clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+      animation: hide 5s ease-in-out;
+    }
+    .jerseyImg {
+      animation: changeImg 5s ease-in-out;
     }
   }
-  .kros {
-    position: absolute;
-    left: 7vw;
-    bottom: 26vh;
-    width: 50vw;
-    line-height: 9vh;
+  .circle {
+    @include center-element;
+    @include circle(70vh, 70vh, $color-decorative);
+    border: 7px solid $color-secondary;
     z-index: -1;
-    color: $color-primary;
-    animation: slides 10s ease-in-out;
-    @include media-query(sm) {
-      left: 7vw;
-      bottom: 5vh;
-      width: 90vw;
-    }
-    h2::first-letter {
-      color: $color-decorative;
-      float: left;
-      font-size: 12vw;
-      padding-right: 10px;
-      border-bottom: 5px double;
-      padding-top: 1rem;
-      @include media-query(sm) {
-        font-size: 19vw;
-      }
-    }
+    font-weight: bolder;
+    filter: drop-shadow(-12px 10px 11px #32363e);
+    animation: grow 5s ease-out;
+    // overflow: hidden;
+    // text-shadow: 15px 15px 30px black;
+    // color: #f0ebdf;
+    // font-size: 53vh;
   }
-  .blob {
+  .ground {
     position: absolute;
-    top: 10vh;
-    height: 87vh;
-    width: 39vw;
-    right: 10%;
-    border-radius: 29% 71% 60% 42%/24% 55% 47% 77%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: $color-primary;
-    border: 2vh solid #32363e00;
-    // filter: drop-shadow(-10px 10px 10px $color-secondary);
-    box-shadow: -7px 10px 5px #32363e66;
-    @include media-query(sm) {
-      width: 65vw;
-      height: 50vh;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    @include media-query(md) {
-      width: 30vw;
-    }
-    @include media-query(lg) {
-      width: 27vw;
-    }
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    clip-path: polygon(100% 75%, 40% 100%, 100% 100%);
+    background-color: $color-secondary;
+    filter: brightness(0.5);
+    z-index: -2;
+    animation: groundMove 5s ease-out;
   }
-  .blob1 {
-    background-image: url(/1.png);
-  }
-  .blob2 {
-    background-image: url(/2.png);
-    animation: change 10s ease-in-out;
-  }
-}
 
-@keyframes change {
-  0% {
-    clip-path: polygon(37% 34%, 54% 20%, 60% 16%, 37% 34%);
-  }
-  50% {
-    clip-path: polygon(0 0, 10% 94%, 88% 96%, 100% 8%);
-  }
-  100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
-}
+  // left: 50%;
+  // transform: translateX(-50%);
 
-@keyframes slides {
-  from {
-    left: -100vw;
+  @keyframes changeImg {
+    0% {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
   }
-  to {
-    left: 7vw;
+
+  @keyframes hide {
+    0% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    100% {
+      clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+  }
+
+  @keyframes grow {
+    from {
+      @include circle(10vh, 10vh, $color-decorative);
+    }
+    to {
+      @include circle(70vh, 70vh, $color-decorative);
+    }
+  }
+
+  @keyframes groundMove {
+    from {
+      // clip-path: polygon(100% 85%, 0 100%, 100% 100%);
+      clip-path: polygon(100% 50%, -25% 100%, 100% 100%);
+    }
+    to {
+      clip-path: polygon(100% 75%, 40% 100%, 100% 100%);
+    }
   }
 }

@@ -1,5 +1,5 @@
-import './globals.scss'
-import Header from './Header'
+import '../scss/globals.scss'
+import Header from '../components/Header'
 import { Josefin_Sans } from 'next/font/google';
 
 const customFont = Josefin_Sans({

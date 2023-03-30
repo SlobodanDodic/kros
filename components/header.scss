@@ -1,23 +1,5 @@
 @import "/scss/variables";
 @import "/scss/mixins";
-@import "./info/info";
-@import "./blog/blog";
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  background-color: $color-primary;
-}
-
-::-webkit-scrollbar {
-  display: none;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
 
 header {
   position: fixed;
@@ -61,6 +43,9 @@ header {
       @include media-query(md) {
         display: none;
       }
+      @include media-query(lg) {
+        display: none;
+      }
     }
     a {
       @include link-decor;
@@ -80,9 +65,7 @@ header {
     align-items: center;
     justify-content: center;
     background-color: #000000ed;
-    // background-color: $color-secondary;
-    //     transform: translateX(1em);
-    // transition: 0.2s transform;
+    animation: menuSlide 1s ease-in-out;
     a {
       @include link-decor;
       color: $color-primary;
@@ -112,11 +95,11 @@ header {
   }
 }
 
-@keyframes anim4 {
+@keyframes menuSlide {
   from {
-    top: -100vh;
+    transform: translateY(-100vh);
   }
   to {
-    top: 0vh;
+    transform: translateY(0vh);
   }
 }

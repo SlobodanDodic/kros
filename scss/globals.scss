@@ -1,0 +1,31 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+@import "../app/blog/blog.scss";
+@import "../app/info/info.scss";
+@import "../app/kontakt/kontakt.scss";
+@import "../components/header.scss";
+@import "../components/spinner.scss";
+@import "../components/textCircle.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $color-primary;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+// Loading:
+.loading-box {
+  @include center-element;
+  height: 100vh;
+  width: 100vw;
+}
