@@ -4,7 +4,7 @@
 .main {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   @include center-element;
   flex-direction: column;
   overflow: hidden;
