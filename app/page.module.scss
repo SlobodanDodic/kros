@@ -20,8 +20,6 @@
       object-fit: contain;
       padding: 10px;
       filter: brightness(0.2);
-      // filter: drop-shadow(0px 0px 15px $color-secondary);
-      // box-shadow: -10px 15px 39px $color-secondary;
     }
     .workImg {
       clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
@@ -33,22 +31,19 @@
   }
   .circle {
     @include center-element;
-    // @include circle(70vh, 70vh, $color-decorative);
-    // border: 7px solid $color-secondary;
-    z-index: -1;
-    // font-weight: bolder;
-    filter: drop-shadow(-12px 10px 11px #32363e);
-    animation: grow 5s ease-out;
-    // overflow: hidden;
-    // text-shadow: 15px 15px 30px black;
-    // color: #f0ebdf;
-    // font-size: 53vh;
     width: 80vh;
     height: inherit;
     background-image: url("../public/ball.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    filter: drop-shadow(-12px 10px 11px #32363e);
+    z-index: -1;
+    animation: grow 6s ease-out;
+    @include media-query(sm) {
+      width: 55vh;
+      animation: growSm 6s ease-out;
+    }
   }
   .ground {
     position: absolute;
@@ -56,15 +51,24 @@
     right: 0;
     height: 100vh;
     width: 100vw;
-    clip-path: polygon(100% 75%, 40% 100%, 100% 100%);
+    clip-path: polygon(100% 80%, 15% 100%, 100% 100%);
     background-color: $color-secondary;
     filter: brightness(0.5);
     z-index: -2;
-    animation: groundMove 5s ease-out;
+    animation: groundMove 7s ease-out;
   }
-
-  // left: 50%;
-  // transform: translateX(-50%);
+  .text {
+    position: absolute;
+    bottom: 0;
+    transform: skew(40deg, -40deg);
+    padding: 3rem;
+    font-size: 11vh;
+    text-shadow: 15px 15px 30px black;
+    color: #f0ebdf;
+    font-weight: 900;
+    letter-spacing: 5px;
+    z-index: -3;
+  }
 
   @keyframes changeImg {
     0% {
@@ -86,22 +90,28 @@
 
   @keyframes grow {
     from {
-      // @include circle(10vh, 10vh, $color-decorative);
       width: 0vh;
     }
     to {
-      // @include circle(70vh, 70vh, $color-decorative);
       width: 80vh;
+    }
+  }
+
+  @keyframes growSm {
+    from {
+      width: 0vh;
+    }
+    to {
+      width: 55vh;
     }
   }
 
   @keyframes groundMove {
     from {
-      // clip-path: polygon(100% 85%, 0 100%, 100% 100%);
       clip-path: polygon(100% 50%, -25% 100%, 100% 100%);
     }
     to {
-      clip-path: polygon(100% 75%, 40% 100%, 100% 100%);
+      clip-path: polygon(100% 80%, 15% 100%, 100% 100%);
     }
   }
 }

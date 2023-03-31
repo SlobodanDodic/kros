@@ -5,7 +5,6 @@
 @import "../app/kontakt/kontakt.scss";
 @import "../components/header.scss";
 @import "../components/spinner.scss";
-@import "../components/textCircle.scss";
 
 * {
   box-sizing: border-box;
@@ -13,7 +12,15 @@
   margin: 0;
 }
 
+html {
+  height: stretch;
+  height: -webkit-stretch;
+}
+
 body {
+  min-height: 100vh;
+  min-height: stretch;
+  min-height: -webkit-stretch;
   background-color: $color-primary;
 }
 

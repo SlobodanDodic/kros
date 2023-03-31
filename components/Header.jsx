@@ -15,9 +15,9 @@ export default function Header() {
       </div>
 
       <div className={toggle ? "menu" : "menu-off"}>
-        <Link href='/info'>Info</Link>
-        <Link href='/blog'>Blog</Link>
-        <Link href='/kontakt'>Kontakt</Link>
+        <Link href='/info' onClick={toggleState}>Info</Link>
+        <Link href='/blog' onClick={toggleState}>Blog</Link>
+        <Link href='/kontakt' onClick={toggleState}>Kontakt</Link>
       </div>
 
       <div className="right">

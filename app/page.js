@@ -3,7 +3,6 @@ import { Roboto_Slab } from 'next/font/google';
 import Image from 'next/image';
 import workImg from '../public/1.png'
 import jerseyImg from '../public/2.png'
-import TextCircle from '@/components/TextCircle';
 
 const customFont = Roboto_Slab({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -24,9 +23,8 @@ export default function Home() {
 
       <div className={styles.ground} />
 
-      <TextCircle />
-
-      {/* <div className={styles}>Klub rekreativnih odbojkaša Sombor</div> */}
+      {/* <div className={styles.text}>KROS</div> */}
+      {/* Klub rekreativnih odbojkaša Sombor */}
     </div>
   )
 }

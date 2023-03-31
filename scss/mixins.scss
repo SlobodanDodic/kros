@@ -12,7 +12,12 @@
     }
   }
   @if $break-point == lg {
-    @media (min-width: 1500px) {
+    @media screen and (max-width: 1500px) and (min-width: 1001px) {
+      @content;
+    }
+  }
+  @if $break-point == xl {
+    @media (min-width: 1501px) {
       @content;
     }
   }
