@@ -15,7 +15,7 @@
       position: absolute;
       bottom: 0vh;
       left: 50vw;
-      height: 90vh;
+      height: 80vh;
       width: auto;
       object-fit: contain;
       padding: 10px;
@@ -31,7 +31,7 @@
   }
   .circle {
     @include center-element;
-    width: 80vh;
+    width: 65vh;
     height: inherit;
     background-image: url("../public/ball.png");
     background-position: center;
@@ -41,7 +41,7 @@
     z-index: -1;
     animation: grow 6s ease-out;
     @include media-query(sm) {
-      width: 55vh;
+      width: 45vh;
       animation: growSm 6s ease-out;
     }
   }
@@ -51,7 +51,7 @@
     right: 0;
     height: 100vh;
     width: 100vw;
-    clip-path: polygon(100% 80%, 15% 100%, 100% 100%);
+    clip-path: polygon(100% 80%, 0% 100%, 100% 100%);
     background-color: $color-secondary;
     filter: brightness(0.5);
     z-index: -2;
@@ -93,7 +93,7 @@
       width: 0vh;
     }
     to {
-      width: 80vh;
+      width: 65vh;
     }
   }
 
@@ -102,7 +102,7 @@
       width: 0vh;
     }
     to {
-      width: 55vh;
+      width: 45vh;
     }
   }
 
@@ -111,7 +111,7 @@
       clip-path: polygon(100% 50%, -25% 100%, 100% 100%);
     }
     to {
-      clip-path: polygon(100% 80%, 15% 100%, 100% 100%);
+      clip-path: polygon(100% 80%, 0% 100%, 100% 100%);
     }
   }
 }
