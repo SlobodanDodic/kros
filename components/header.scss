@@ -16,7 +16,7 @@ header {
   //   display: flex;
   //   justify-content: space-between;
   //   width: 10vw;
-  //   height: 100vh;
+  //   height: 100svh;
   //   padding: 0.7rem 1.4rem;
   //   z-index: -1;
   //   align-items: center;
@@ -75,14 +75,14 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100svh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     // padding: 1.5rem;
-    font-size: 2rem;
+    font-size: 1.75rem;
     letter-spacing: 3px;
     background-color: #000000ed;
     animation: menuSlide 1s ease-in-out;
@@ -118,7 +118,7 @@ header {
 
 @keyframes menuSlide {
   from {
-    transform: translateY(-100vh);
+    transform: translateY(-100svh);
   }
   to {
     transform: translateY(0vh);

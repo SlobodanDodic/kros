@@ -12,15 +12,15 @@
   margin: 0;
 }
 
-html {
-  height: stretch;
-  height: -webkit-stretch;
-}
+// html {
+//   height: stretch;
+//   height: -webkit-stretch;
+// }
 
 body {
-  min-height: 100svh;
-  min-height: stretch;
-  min-height: -webkit-stretch;
+  // min-height: 100svh;
+  // min-height: stretch;
+  // min-height: -webkit-stretch;
   background-color: $color-primary;
 }
 
