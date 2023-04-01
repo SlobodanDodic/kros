@@ -24,7 +24,7 @@ export default function Home() {
       <div className={styles.ground} />
 
       <div className={styles.text}>
-        <span>K.R.O.S.</span>
+        <span> K.R.O.S.</span>
         <div className={styles.textLong}>Rekreativna Odbojka</div>
       </div>
 
