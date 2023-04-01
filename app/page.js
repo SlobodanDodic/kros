@@ -28,9 +28,6 @@ export default function Home() {
         <div className={styles.textLong}>Rekreativna Odbojka</div>
       </div>
 
-      {/* <div className={styles.textLong}>
-        <span>Klub Rekreativnih Odbojkaša Sombor</span>
-      </div> */}
     </div>
   )
 }
