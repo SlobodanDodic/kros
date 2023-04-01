@@ -68,10 +68,8 @@
     justify-content: center;
     align-items: center;
     color: #f0f0f0;
-    padding: 2rem 3rem;
-    border-left: 15px solid $color-secondary;
-    border-right: 15px solid $color-secondary;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    padding: 3vh 0vh;
+    clip-path: polygon(3% 14%, 100% 0, 87% 95%, 8% 88%);
     background: linear-gradient(
       0deg,
       $color-secondary 0%,
@@ -84,20 +82,45 @@
       font-size: 7vh;
       letter-spacing: 3px;
       text-align: center;
-      // &::after {
-      //   content: "";
-      //   top: 7vh;
-      //   width: 100%;
-      //   border: 10px double white;
-      // }
     }
     .textLong {
       font-size: 1.5vh;
-      letter-spacing: 2px;
+      letter-spacing: 5px;
       font-weight: 300;
-      line-height: 0.5;
+      line-height: 0.35;
       text-decoration: overline;
+      font-style: italic;
     }
+  }
+  .icon {
+    position: absolute;
+    bottom: 2svh;
+    width: 10svh;
+    height: 10svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 35%, 100% 50%, 90% 90%, 50% 80%, 10% 90%, 0% 50%);
+    padding-top: 17px;
+    letter-spacing: 2px;
+    color: $color-primary;
+    background: $color-decorative;
+    text-decoration: none;
+    font-size: 2vh;
+    font-weight: 700;
+  }
+  .plus {
+    position: absolute;
+    bottom: 0svh;
+    width: 10svh;
+    height: 10svh;
+    padding-bottom: 1svh;
+    font-size: 2.75svh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: $color-primary;
+    z-index: -1;
   }
 
   @keyframes changeImg {

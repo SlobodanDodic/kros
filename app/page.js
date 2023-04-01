@@ -3,6 +3,7 @@ import { Roboto_Slab } from 'next/font/google';
 import Image from 'next/image';
 import workImg from '../public/images/1.png'
 import jerseyImg from '../public/images/2.png'
+import Link from 'next/link';
 
 const customFont = Roboto_Slab({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -27,6 +28,9 @@ export default function Home() {
         <span> K.R.O.S.</span>
         <div className={styles.textLong}>Rekreativna Odbojka</div>
       </div>
+
+      <Link href='/info' className={styles.icon}>INFO</Link>
+      <span className={styles.plus}>+</span>
 
     </div>
   )
