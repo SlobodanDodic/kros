@@ -4,8 +4,8 @@ export const metadata = {
 
 export default function Blog() {
   return (
-    <div className=''>
-      blog
+    <div className='blog'>
+      Stranica je u fazi izrade...
     </div>
   )
 }
