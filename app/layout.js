@@ -1,9 +1,8 @@
 import '../scss/globals.scss'
 import Header from '../components/Header'
-import { Josefin_Sans } from 'next/font/google';
+import { Oswald } from '@next/font/google'
 
-const customFont = Josefin_Sans({
-  weight: ['100', '200', '300', '400', '500', '600', '700'],
+const customFont = Oswald({
   subsets: ['latin'],
   display: 'swap'
 })

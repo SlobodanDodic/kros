@@ -33,7 +33,7 @@
     @include center-element;
     width: 65vh;
     height: inherit;
-    background-image: url("../public/ball.png");
+    background-image: url("../public/images/ball.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -59,15 +59,45 @@
   }
   .text {
     position: absolute;
-    bottom: 0;
-    transform: skew(40deg, -40deg);
-    padding: 3rem;
-    font-size: 11vh;
-    text-shadow: 15px 15px 30px black;
-    color: #f0ebdf;
-    font-weight: 900;
-    letter-spacing: 5px;
-    z-index: -3;
+    top: 5vh;
+    width: 30%;
+    min-width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+    padding: 2rem 3rem;
+    border-left: 15px solid $color-secondary;
+    border-right: 15px solid $color-secondary;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background: linear-gradient(
+      0deg,
+      $color-secondary 0%,
+      $color-secondary 50%,
+      $color-primary 50%,
+      $color-primary 100%
+    );
+    span {
+      mix-blend-mode: difference;
+      font-size: 8vh;
+      letter-spacing: 5px;
+      text-align: center;
+      &::after {
+        content: "";
+        top: 7vh;
+        width: 100%;
+        border: 10px double white;
+      }
+    }
+    .textLong {
+      font-size: 1.5vh;
+      letter-spacing: 2px;
+      font-weight: 300;
+      line-height: 0.5;
+      text-decoration: overline;
+    }
   }
 
   @keyframes changeImg {
@@ -112,6 +142,17 @@
     }
     to {
       clip-path: polygon(100% 80%, 0% 100%, 100% 100%);
+    }
+  }
+
+  @keyframes mymove {
+    50% {
+      transform: scale(2);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
     }
   }
 }

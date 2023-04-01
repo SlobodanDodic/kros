@@ -24,8 +24,8 @@ export default function Header() {
         <Link href='/info'>Info</Link>
         <Link href='/blog'>Blog</Link>
         <Link href='/kontakt'>Kontakt</Link>
-        <div className="shape-menu" onClick={toggleState}>
-          <p className={toggle ? "letterM-off" : "letterM"}>M</p>
+        <div className="shape" onClick={toggleState}>
+          <p className={toggle ? "letterM-off" : "letterM"}>menu</p>
           <p className={toggle ? "letterX" : "letterX-off"}>X</p>
         </div>
       </div>

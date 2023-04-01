@@ -12,15 +12,7 @@
   margin: 0;
 }
 
-// html {
-//   height: stretch;
-//   height: -webkit-stretch;
-// }
-
 body {
-  // min-height: 100svh;
-  // min-height: stretch;
-  // min-height: -webkit-stretch;
   background-color: $color-primary;
 }
 
@@ -33,6 +25,6 @@ body {
 // Loading:
 .loading-box {
   @include center-element;
-  height: 100vh;
+  height: 100svh;
   width: 100vw;
 }
