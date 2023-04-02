@@ -4,8 +4,12 @@ export const metadata = {
 
 export default function Kontakt() {
   return (
-    <div className='kontakt'>
-      Stranica je u fazi izrade...
+    <div className='box'>
+      <div className="img-box img-box-kontakt">
+        <h1>KONTAKT</h1>
+      </div>
+
+      <div className="kontakt">Stranica je u fazi izrade...</div>
     </div>
   )
 }

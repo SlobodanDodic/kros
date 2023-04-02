@@ -28,3 +28,40 @@ body {
   height: 100svh;
   width: 100vw;
 }
+
+// Page Intro:
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1600px;
+  margin: 10svh auto;
+  color: $color-secondary;
+  .img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 24vh;
+    margin-bottom: 5vh;
+    filter: drop-shadow(2px 4px 6px $color-secondary);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: repeat-x;
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 39vh;
+      font-size: 11vh;
+      font-weight: 700;
+      text-align: center;
+      color: #f0ebdf70;
+      text-shadow: 2px 2px 0px #000000a3;
+      mix-blend-mode: multiply;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 @import "/scss/variables";
 @import "/scss/mixins";
 
-.info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  color: $color-secondary;
+.box {
+  .img-box-info {
+    background-image: url("../../public/images/info.jpg");
+  }
+  .info {
+    margin: 5vh auto;
+  }
 }

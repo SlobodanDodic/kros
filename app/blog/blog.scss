@@ -1,11 +1,11 @@
 @import "/scss/variables";
 @import "/scss/mixins";
 
-.blog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  color: $color-secondary;
+.box {
+  .img-box-blog {
+    background-image: url("../../public/images/blog.jpg");
+  }
+  .blog {
+    margin: 5vh auto;
+  }
 }
