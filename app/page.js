@@ -1,8 +1,8 @@
 import styles from './page.module.scss'
 import { Roboto_Slab } from 'next/font/google';
 import Image from 'next/image';
-import workImg from '../public/images/1.png'
-import jerseyImg from '../public/images/2.png'
+import workImg from '../public/images/hero/1.png'
+import jerseyImg from '../public/images/hero/2.png'
 import Link from 'next/link';
 
 const customFont = Roboto_Slab({
@@ -28,6 +28,8 @@ export default function Home() {
         <span> K.R.O.S.</span>
         <div className={styles.textLong}>Rekreativna Odbojka</div>
       </div>
+
+      <div className={styles.line} />
 
       <Link href='/info' className={styles.icon}>INFO</Link>
       <span className={styles.plus}>+</span>

@@ -33,7 +33,7 @@
     @include center-element;
     width: 65vh;
     height: inherit;
-    background-image: url("../public/images/ball.png");
+    background-image: url("../public/images/hero/ball.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -121,6 +121,16 @@
     justify-content: center;
     color: $color-primary;
     z-index: -1;
+  }
+  .line {
+    position: absolute;
+    top: 15svh;
+    left: 0;
+    width: 100vw;
+    height: 1vh;
+    background-color: $color-secondary;
+    z-index: -1;
+    filter: blur(3px);
   }
 
   @keyframes changeImg {

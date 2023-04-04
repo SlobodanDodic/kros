@@ -36,9 +36,8 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  height: 100vh;
   max-width: 1600px;
-  margin: 10svh auto;
+  margin: 4rem auto 1rem;
   color: $color-secondary;
   .img-box {
     display: flex;
@@ -62,6 +61,17 @@ body {
       color: #f0ebdf70;
       text-shadow: 2px 2px 0px #000000a3;
       mix-blend-mode: multiply;
+
+      // display: flex;
+      // justify-content: center;
+      // align-items: flex-end;
+      // height: 39vh;
+      // font-size: 12vh;
+      // font-weight: 700;
+      // text-align: center;
+      // color: #f0ebdf94;
+      // mix-blend-mode: multiply;
+      // filter: drop-shadow(5px 5px 2px black);
     }
   }
 }

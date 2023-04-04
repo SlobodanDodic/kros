@@ -1,6 +1,6 @@
 import '../scss/globals.scss'
 import Header from '../components/Header'
-import { Oswald } from '@next/font/google'
+import { Oswald } from 'next/font/google'
 
 const customFont = Oswald({
   subsets: ['latin'],

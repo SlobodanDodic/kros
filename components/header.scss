@@ -6,6 +6,7 @@ header {
   top: 0vh;
   @include between-element;
   width: 100vw;
+  height: 4rem;
   background-color: $color-primary;
   color: $color-secondary;
   padding: 0.7rem 1.4rem;
@@ -38,7 +39,7 @@ header {
     p {
       position: absolute;
       left: 50%;
-      top: 60%;
+      top: 55%;
       font-size: 3.5rem;
       transform: translate(-50%, -50%);
     }
