@@ -30,8 +30,8 @@
     }
   }
   .circle {
-    @include center-element;
-    width: 65vh;
+    // @include center-element;
+    width: 55vh;
     height: inherit;
     background-image: url("../public/images/hero/ball.png");
     background-position: center;
@@ -59,7 +59,7 @@
   }
   .text {
     position: absolute;
-    top: 4svh;
+    top: 5svh;
     width: 30%;
     min-width: 300px;
     height: auto;
@@ -91,36 +91,6 @@
       text-decoration: overline;
       font-style: italic;
     }
-  }
-  .icon {
-    position: absolute;
-    bottom: 2svh;
-    width: 10svh;
-    height: 10svh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    clip-path: polygon(50% 35%, 100% 50%, 90% 90%, 50% 80%, 10% 90%, 0% 50%);
-    padding-top: 17px;
-    letter-spacing: 2px;
-    color: $color-primary;
-    background: $color-decorative;
-    text-decoration: none;
-    font-size: 2vh;
-    font-weight: 700;
-  }
-  .plus {
-    position: absolute;
-    bottom: 0svh;
-    width: 10svh;
-    height: 10svh;
-    padding-bottom: 1svh;
-    font-size: 2.75svh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    color: $color-primary;
-    z-index: -1;
   }
   .line {
     position: absolute;
@@ -156,7 +126,7 @@
       width: 0vh;
     }
     to {
-      width: 65vh;
+      width: 55vh;
     }
   }
 

@@ -1,0 +1,55 @@
+@import "/scss/variables";
+@import "/scss/mixins";
+
+:root {
+  --dark-color: #086977;
+  --light-color: #e96c1c;
+}
+
+svg {
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+#darkGroup {
+  fill: var(--dark-color);
+}
+#lightGroup {
+  fill: var(--light-color);
+}
+#dark1,
+#light1,
+#dark2 {
+  transition: all 1s ease;
+}
+#dark2 {
+  transform: translateX(-100%);
+}
+svg:hover #light1 {
+  transform: translateX(20%);
+  opacity: 0.75;
+}
+svg:hover #dark1 {
+  transform: translateX(40%);
+  opacity: 0;
+}
+svg:hover #dark2 {
+  transform: translateX(0%);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    filter: drop-shadow(0px -7px 11px #f0ebdf);
+  }
+
+  70% {
+    transform: scale(1);
+    filter: drop-shadow(0px -7px 11px #f0ebdf30);
+  }
+
+  100% {
+    transform: scale(0.95);
+    filter: drop-shadow(0px -7px 11px #f0ebdf);
+  }
+}

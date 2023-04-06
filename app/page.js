@@ -4,6 +4,7 @@ import Image from 'next/image';
 import workImg from '../public/images/hero/1.png'
 import jerseyImg from '../public/images/hero/2.png'
 import Link from 'next/link';
+import Arrows from '@/components/Arrows';
 
 const customFont = Roboto_Slab({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -31,8 +32,7 @@ export default function Home() {
 
       <div className={styles.line} />
 
-      <Link href='/info' className={styles.icon}>INFO</Link>
-      <span className={styles.plus}>+</span>
+      <Arrows />
 
     </div>
   )
