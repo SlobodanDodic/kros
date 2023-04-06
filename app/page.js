@@ -3,7 +3,6 @@ import { Roboto_Slab } from 'next/font/google';
 import Image from 'next/image';
 import workImg from '../public/images/hero/1.png'
 import jerseyImg from '../public/images/hero/2.png'
-import Link from 'next/link';
 import Arrows from '@/components/Arrows';
 
 const customFont = Roboto_Slab({
@@ -25,9 +24,14 @@ export default function Home() {
 
       <div className={styles.ground} />
 
+      <section className={styles.wrapper}>
+        <div className={styles.top}>KROS</div>
+        <div className={styles.bottom} aria-hidden="true">KROS</div>
+      </section>
+
       <div className={styles.text}>
-        <span> K.R.O.S.</span>
-        <div className={styles.textLong}>Rekreativna Odbojka</div>
+        <h2>Odbojka</h2>
+        <h2>za rekreativce</h2>
       </div>
 
       <div className={styles.line} />
