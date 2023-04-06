@@ -40,16 +40,16 @@ svg:hover #dark2 {
 @keyframes pulse {
   0% {
     transform: scale(0.95);
-    filter: drop-shadow(0px -7px 11px #f0ebdf);
+    filter: drop-shadow(0px 0px 10px #f0ebdf9c);
   }
 
   70% {
     transform: scale(1);
-    filter: drop-shadow(0px -7px 11px #f0ebdf30);
+    filter: drop-shadow(0px 0px 10px #f0ebdf30);
   }
 
   100% {
     transform: scale(0.95);
-    filter: drop-shadow(0px -7px 11px #f0ebdf);
+    filter: drop-shadow(0px 0px 10px #f0ebdf9c);
   }
 }
