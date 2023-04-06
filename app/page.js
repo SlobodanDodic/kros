@@ -42,6 +42,7 @@ export default function Home() {
 
       <div className={styles.line} />
 
+      <div className={styles.svgLine} />
       <Arrows />
 
     </div>

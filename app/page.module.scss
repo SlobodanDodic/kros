@@ -116,6 +116,19 @@
       top: 17vh;
     }
   }
+  .svgLine {
+    position: absolute;
+    bottom: 55px;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+    background-color: $color-primary;
+    z-index: -2;
+    // @include media-query(sm) {
+    //   top: 17vh;
+    // }
+  }
 
   @keyframes changeImg {
     0% {
