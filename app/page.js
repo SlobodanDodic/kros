@@ -1,5 +1,5 @@
 import styles from './page.module.scss'
-import { Roboto_Slab } from 'next/font/google';
+import { Roboto_Slab, Merienda } from 'next/font/google';
 import Image from 'next/image';
 import workImg from '../public/images/hero/1.png'
 import jerseyImg from '../public/images/hero/2.png'
@@ -7,6 +7,12 @@ import Arrows from '@/components/Arrows';
 
 const customFont = Roboto_Slab({
   weight: ['100', '300', '400', '500', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap'
+})
+
+const handFont = Merienda({
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap'
 })
@@ -29,7 +35,7 @@ export default function Home() {
         <div className={styles.bottom} aria-hidden="true">KROS</div>
       </section>
 
-      <div className={styles.text}>
+      <div className={styles.text + ' ' + handFont.className}>
         <h2>Odbojka</h2>
         <h2>za rekreativce</h2>
       </div>

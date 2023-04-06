@@ -30,7 +30,6 @@
     }
   }
   .circle {
-    // @include center-element;
     width: 55vh;
     height: inherit;
     background-image: url("../public/images/hero/ball.png");
@@ -41,7 +40,7 @@
     z-index: -1;
     animation: grow 6s ease-out;
     @include media-query(sm) {
-      width: 45vh;
+      width: 41vh;
       animation: growSm 6s ease-out;
     }
   }
@@ -104,17 +103,19 @@
     text-align: center;
     letter-spacing: 4px;
     z-index: -1;
-    font-family: fantasy;
   }
   .line {
     position: absolute;
-    top: 15vh;
+    top: 13vh;
     left: 0;
     width: 100vw;
     height: 1vh;
     clip-path: polygon(100% 80%, 0% 100%, 100% 100%);
     background-color: $color-secondary;
     z-index: -2;
+    @include media-query(sm) {
+      top: 17vh;
+    }
   }
 
   @keyframes changeImg {
@@ -149,7 +150,7 @@
       width: 0vh;
     }
     to {
-      width: 45vh;
+      width: 41vh;
     }
   }
 
