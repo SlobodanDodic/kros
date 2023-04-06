@@ -59,7 +59,7 @@
   }
   .text {
     position: absolute;
-    top: 5svh;
+    top: 1svh;
     width: 30%;
     min-width: 300px;
     height: auto;
@@ -69,6 +69,7 @@
     align-items: center;
     color: #f0f0f0;
     padding: 3vh 0vh;
+    z-index: -1;
     clip-path: polygon(3% 14%, 100% 0, 87% 95%, 8% 88%);
     background: linear-gradient(
       0deg,
@@ -91,16 +92,22 @@
       text-decoration: overline;
       font-style: italic;
     }
+    @include media-query(sm) {
+      top: 5svh;
+    }
   }
   .line {
     position: absolute;
-    top: 16svh;
+    top: 11svh;
     left: 0;
     width: 100vw;
     height: 1vh;
     background-color: $color-secondary;
-    z-index: -1;
+    z-index: -2;
     filter: blur(3px);
+    @include media-query(sm) {
+      top: 16svh;
+    }
   }
 
   @keyframes changeImg {
